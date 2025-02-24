@@ -1,8 +1,9 @@
 from fastapi import FastAPI
-
+print("service is starting")
 # Create an instance of FastAPI
 app = FastAPI()
 
+print("service is started")
 # Define a route for the root ("/") endpoint
 @app.get("/")
 def read_root():
