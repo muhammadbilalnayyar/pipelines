@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 print("service is starting")
 # Create an instance of FastAPI
 app = FastAPI()
