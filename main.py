@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import uvicorn
+
 print("service is starting")
 # Create an instance of FastAPI
 app = FastAPI()
@@ -14,6 +14,3 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
-# This block ensures uvicorn runs only when the script is run directly
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8001, reload=True)
